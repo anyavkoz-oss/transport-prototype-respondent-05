@@ -1,0 +1,61 @@
+/* A stationary map surface prevents resize/pan jumps when the sheet moves. */
+#app #map,#app:has(.sheet.collapsed) #map,#app:has(.sheet.expanded) #map{bottom:0}
+#sheet,#sheet *{touch-action:none}
+#sheet{transition:height .34s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+#sheet.dragging{transition:none;user-select:none}
+#sheet-body,.stop-detail-routes,.route-stops-list{overflow:hidden;overscroll-behavior:none}
+.route-view #sheet,.route-view #sheet *{touch-action:pan-y}
+.route-view #handle,.route-view #handle *,.route-view .bus-route-heading,.route-view .bus-route-heading *{touch-action:none}
+.route-view .route-stops-list{overflow-x:hidden;overflow-y:auto;overscroll-behavior-y:contain;scrollbar-width:thin}
+#sheet-body{flex:1;min-height:0;padding-bottom:0}
+.handle{height:24px;min-height:24px;cursor:grab;display:flex;align-items:center;justify-content:center;padding:0}
+.handle span{width:36px;height:4px}
+.dragging .handle{cursor:grabbing}
+.route-view .sheet.collapsed{height:25%}
+#sheet-shade{position:absolute;inset:0;z-index:415;background:#0008;border-radius:0;opacity:0;pointer-events:none;transition:opacity .34s;width:100%;height:100%}
+#app:has(.sheet.expanded) #sheet-shade{opacity:1;pointer-events:auto}
+#app:has(.sheet.expanded)>header{opacity:0;pointer-events:none}
+.map-tools,.layer-switch,#stop-back{transition:bottom .34s cubic-bezier(.2,.8,.2,1),opacity .2s}
+#app:has(.sheet.collapsed) #stop-back{bottom:calc(25% + 10px)}
+.far-bubble{display:flex;align-items:center;gap:7px;width:max-content;padding:4px 8px 4px 4px;border-radius:17px;font:13px/15px YSText}
+.far-bubble .far-stop-icon{width:40px;height:40px;border-radius:13px;flex-shrink:0}
+.far-bubble>div{display:flex;gap:4px;margin:0}
+.far-bubble button,.far-bubble button:first-child{background:#efeeee;border-radius:20px;padding:0 11px;height:32px;font-size:13px;flex:none}
+.origin-input-icon img{width:24px;height:24px;object-fit:contain}
+#overlay.favorites-screen{padding:0 12px 24px;background:#fff}
+.favorites-screen .page-top{height:64px;min-height:64px;margin:0 -4px;padding:0;background:#fff;position:relative}
+.favorites-screen .page-top h1{position:absolute;left:48px;right:48px;text-align:center;font:600 16px/20px YSText;pointer-events:none}
+.favorites-screen #page-close{display:none}
+.favorite-segments{display:flex;background:#f5f4f2;border-radius:24px;padding:8px;margin:8px 0 16px;height:64px}
+.favorite-segments span{flex:1;display:grid;place-items:center;font-size:16px;border-radius:16px}
+.favorite-segments .selected{background:#fff;box-shadow:0 2px 5px #0001;font-weight:600}
+.favorite-stop-card{background:#f5f4f2;border-radius:24px;padding:12px 12px 8px;margin-bottom:12px}
+.favorite-stop-heading{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;padding:0 0 8px 4px;min-height:50px}
+.favorite-stop-heading strong{display:block;font:800 24px/26px YSDisplay}
+.favorite-stop-heading small{display:flex;align-items:center;font-size:13px;color:#92928e;line-height:17px}
+.favorite-stop-heading small img{opacity:.5}
+.favorite-route{display:flex;align-items:center;gap:12px;min-height:56px;width:100%;text-align:left;padding:0 4px}
+.favorite-route .route-info{min-width:0}.favorite-route .route-info .sub{font-size:13px;line-height:17px}
+.favorite-route .arrival{white-space:nowrap;flex-shrink:0}
+@media(max-width:360px){.far-bubble{gap:5px;font-size:12px}.far-bubble button{padding:0 9px}.favorite-route{gap:8px}}
+
+#app .sheet.expanded{height:min(84%,calc(100% - 120px))}
+#app:has(.sheet.expanded) #stop-back{bottom:calc(min(84%,100% - 120px) + 10px)}
+.favorite-chevron{width:24px;height:24px}
+@media(max-height:650px){
+  .sheet.expanded .stop-card{padding-top:6px;padding-bottom:4px}
+  .sheet.expanded .stop-heading{height:32px;margin-bottom:2px}
+  .sheet.expanded .live-rows{height:88px}
+  .sheet.expanded .route-row{height:44px;min-height:44px}
+  .sheet.expanded .dots{height:20px}
+  .sheet.expanded .wallet-card{height:120px;padding-top:10px}
+  .sheet.expanded .wallet-card strong,.sheet.expanded .wallet-title{margin-top:7px}
+  .sheet.expanded .wallet-card>button:not(.wallet-title){height:34px;min-height:34px}
+  .sheet.expanded .promo{height:48px;min-height:48px;margin-top:8px;padding:4px 12px}
+  .sheet.expanded .promo strong{font-size:18px;line-height:18px}
+  .sheet.expanded .promo p{display:none}
+  .sheet.expanded .stop-detail-heading{padding-bottom:6px}
+  .sheet.expanded .stop-detail-routes .route-info .sub{font-size:12px}
+}
+
+#sheet .day-schedule-scroll{overflow-y:auto;overscroll-behavior-y:contain;scrollbar-width:thin}#sheet .day-schedule-scroll,#sheet .day-schedule-scroll *{touch-action:pan-y}

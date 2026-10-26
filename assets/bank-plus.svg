@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / Payment / YandexCard">
+<g clip-path="url(#clip0_0_2710)">
+<path id="Subtract" d="M30 16C30 18.2091 28.2091 20 26 20H4C1.79086 20 0 18.2091 0 16V4C0 1.79086 1.79086 0 4 0H26C28.2091 0 30 1.79086 30 4V16Z" fill="#F8604A"/>
+<path id="&#208;&#179;&#208;&#187;&#208;&#184;&#209;&#132;" d="M16.3147 5.74383H15.4063C13.741 5.74383 12.865 6.58642 12.865 7.8287C12.865 9.23302 13.4706 9.89197 14.7142 10.7346L15.7415 11.4259L12.7893 15.8333H10.5833L13.2327 11.8904C11.7079 10.7994 10.8536 9.74074 10.8536 7.94753C10.8536 5.70062 12.4217 4.16667 15.3955 4.16667H18.3477V15.8225H16.3147V5.74383Z" fill="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_2710">
+<rect width="30" height="20" rx="4" fill="white"/>
+</clipPath>
+</defs>
+</svg>

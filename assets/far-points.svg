@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="PLUS-glyph-shape" clip-path="url(#clip0_0_1007)">
+<path id="shape" d="M8.64001 12.8L10.2 8H16C16 10.1217 15.1572 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84342 15.1571 2.34313 13.6569C0.84284 12.1566 0 10.1217 0 8C0 5.87827 0.84284 3.84344 2.34313 2.34315C3.84342 0.842855 5.87827 0 8 0C8.83937 -5.0076e-06 9.67354 0.131824 10.472 0.390667L8.64935 6H3.32533L2.67467 8H8L6.44001 12.8H8.64001ZM10.8493 6L12.376 1.304C14.0455 2.39485 15.248 4.0694 15.748 6H10.8493Z" fill-rule="evenodd" clip-rule="evenodd" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_0_1007">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

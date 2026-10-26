@@ -1,0 +1,182 @@
+@font-face{font-family:YSText;src:url('assets/text.ttf')}@font-face{font-family:YSText;src:url('assets/medium.ttf');font-weight:600}@font-face{font-family:YSDisplay;src:url('assets/display.ttf');font-weight:800}
+:root{--blue:#009ff5;--green:#00985f;--yellow:#fce000;--ink:#222321;--muted:#92928e}
+html,body{font-family:YSText,Arial,sans-serif}button{font-family:inherit}#app{max-width:480px;background:#f7f6f2}h1,h2,.stop-title,.origin,.wallet-card strong,.wallet-title,.promo strong{font-family:YSDisplay,Arial,sans-serif;font-weight:800;letter-spacing:0}.asset-icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}.asset-icon img{height:100%;width:100%}header{top:max(46px,env(safe-area-inset-top));left:20px;right:20px}.origin{padding:6px 0;box-shadow:none;background:transparent;font-size:24px;gap:5px;border-radius:0;text-shadow:0 2px 8px white,0 -2px 8px white}.service-icon{width:28px;height:28px;background:#fff;border-radius:50%;display:grid;place-items:center;box-shadow:0 2px 4px #0002}.service-icon img{width:14px;height:25px;transform:rotate(0)}.chevron-disc{display:inline-flex;background:#222;color:#fff;border-radius:50%;width:14px;height:14px;align-items:center;justify-content:center;font-family:Arial;font-size:20px;line-height:14px;text-shadow:none}.origin .chevron-disc{width:13px;height:13px;font-size:18px;flex-shrink:0}.map-shade{height:110px;background:linear-gradient(#fffffff2,#ffffff66,transparent)}
+#map{bottom:calc(51% - 32px);background:#f7f6f2}#app:has(.sheet.collapsed) #map{bottom:calc(25% - 32px)}#app:has(.sheet.expanded) #map{bottom:calc(84% - 32px)}
+.layer-switch{top:auto;bottom:calc(51% + 68px);right:12px;border-radius:30px;padding:4px;gap:0;box-shadow:0 4px 20px #0002}.layer-switch button{width:40px;height:43px}.layer-switch button:not(.selected){opacity:.45}.layer-switch button.selected{background:#f2f2f2;color:#222}.layer-switch button[data-layer=metro].selected{background:#f2f2f2}.layer-switch button[data-layer=train].selected{background:#f2f2f2}.map-tools{top:auto;bottom:calc(51% + 10px);right:12px;left:auto}.round{width:46px;height:46px}.map-tools #zoom-in,.map-tools #zoom-out{display:none}#app:has(.sheet.collapsed) .layer-switch{bottom:calc(25% + 68px)}#app:has(.sheet.collapsed) .map-tools{bottom:calc(25% + 10px)}#app:has(.sheet.expanded) .layer-switch{opacity:0;pointer-events:none}#app:has(.sheet.expanded) .map-tools{opacity:0;pointer-events:none}
+.sheet{height:51%;border-radius:32px 32px 0 0;box-shadow:0 -4px 20px rgba(0,0,0,.08)}.sheet.expanded{height:84%}.sheet.collapsed{height:25%}.handle{min-height:16px;height:16px}.handle span{width:30px;height:3px;opacity:.45}#sheet-body{padding:0 0 118px;overflow-x:hidden}.carousel{width:100%;overflow:hidden;touch-action:pan-y;user-select:none}.carousel-track{display:flex;gap:6px;width:100%;will-change:transform}.stop-card{flex:0 0 calc(100% - 38px);padding:12px 14px 7px;border-radius:24px;background:#f5f4f2;touch-action:pan-y;min-width:0}.stop-heading{height:39px;margin:0 0 12px;gap:0}.stop-title{font-size:24px;line-height:25px;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;max-width:calc(100% - 35px)}.stop-title .chevron-disc{vertical-align:3px}.stop-heading .heart{padding:0;min-width:28px}.route-row{height:56px;min-height:56px;gap:5px}.route-main{gap:12px;padding:0}.mode-icon{width:32px;height:32px;background:#009ff5}.route-num{font-size:16px;line-height:18px}.route-info .sub{font-size:12px;line-height:15px;max-width:100%;display:block}.arrival{font-size:15px;line-height:17px;font-weight:600;margin-left:0}.route-info{flex:1}.mini-heart{color:#ec625a}.dots{height:25px;gap:6px}.dots button{height:6px;width:6px;background:#bfbfbd}.dots button.active{width:8px;height:8px;background:#222}.more-routes{font-size:13px;padding:8px 0 2px}.ticket-grid{margin:6px 16px 0;gap:12px}.wallet-card{height:169px;border-radius:24px;padding:14px 8px 8px;background:#f5f4f2}.wallet-card.troika{background:linear-gradient(125deg,#1d68b9 30%,#2f8bc4 70%,#3db9ce)}.wallet-label{font-size:12px;white-space:nowrap;gap:3px;padding-left:5px}.troika .wallet-label{color:#90c4e8}.wallet-label #troika-settings{background:none;padding:0;min-height:20px;color:white;width:20px;margin:0 0 0 auto;flex-shrink:0}.wallet-card strong{font-size:22px;line-height:24px;margin:14px 6px 0}.wallet-card>button{height:40px;min-height:40px;font-size:13px;font-weight:600;border-radius:22px}.wallet-card .wallet-title{background:none;text-align:left;font-size:22px;margin:14px 6px 0;padding:0;height:auto;min-height:25px;border-radius:0}.wallet-card .buy{margin-top:auto;background:#fce000}.ticket-card:after{bottom:58px}.promo{margin:12px 16px 0;height:120px;border-radius:18px;background:#38b5f0;padding:16px}.promo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.promo strong,.promo p{position:relative;z-index:1}.promo strong{font-size:26px;line-height:26px}.promo p{font-size:11px}.search-dock{height:64px;left:24px;right:24px;bottom:max(24px,env(safe-area-inset-bottom));padding:4px 12px;box-shadow:none;background:transparent}.search-main{gap:16px;font-size:16px;font-weight:600;padding:0 6px;white-space:nowrap}.search-main>span:last-child{flex:1;text-align:center}.scan-icon{font-family:Arial;font-size:34px;font-weight:400;line-height:30px}#favorites-open{width:34px}.route-fields{position:relative;background:#f5f4f2;margin:0 16px 8px;border-radius:24px;padding:0 44px 0 16px;height:112px}.route-fields>button:not(#swap):not(#train-edit),.route-fields.static>div{display:flex;align-items:center;gap:18px;width:100%;height:56px;text-align:left;font-size:16px;padding:0}.route-fields>button:nth-child(2),.route-fields.static>div:nth-child(2){border-top:1px solid #e4e3e1}.route-fields #swap,.route-fields #train-edit{position:absolute;right:12px;top:37px;font-size:26px;padding:0;height:35px;width:24px}.origin-ring{width:13px;height:13px;border:3px solid #222;border-radius:50%;margin:0 3px}.route-fields.static{margin:5px 0 16px}.route-fields.static span{margin-left:12px}
+.pin-inner{border:0;border-radius:12px;padding:3px;transform:translate(-16px,-16px);box-shadow:0 2px 8px #0002;background:#fff;font-family:YSText;font-size:13px;gap:6px}.pin-inner.selected{border:0;padding:4px 12px 4px 4px;transform:translate(-52px,-60px);box-shadow:0 3px 14px #0002}.pin-inner .pin-icon{height:22px;width:22px;border-radius:6px;background:#009ff5}.pin-icon>img{width:20px;height:20px}.pin-inner.selected .pin-icon{width:40px;height:40px;border-radius:12px}.pin-inner.selected .pin-icon>img{height:30px;width:30px}.pin-inner small{font-family:YSText;font-size:11px;color:#999;margin-top:2px}.pin-inner.metro.selected .pin-icon{background:#ff4135;height:44px;width:44px}.pin-inner.metro .pin-icon .asset-icon{filter:brightness(0) invert(1)}.pin-inner.metro.selected .pin-label{display:none}.stop-dot{position:absolute;left:10px;top:10px;background:#fff;border:2px solid #222;border-radius:50%;width:10px;height:10px}.origin-pin{width:24px;height:24px;background:#ff5b43;border:4px solid white;box-shadow:0 0 0 2px #ff5b4388;border-radius:50%}.walk-label{background:#fff;border-radius:20px;padding:5px 6px;font:12px YSText;box-shadow:0 3px 7px #0001;white-space:nowrap}.vehicle-marker{background:none;border:0}.vehicle-body{width:34px;height:68px;filter:drop-shadow(2px 3px 3px #0003)}.vehicle-body img{height:100%;width:100%}.vehicle-label{position:absolute;right:38px;top:13px;background:#fff;border-radius:12px;padding:4px 7px;color:#009ff5;font:600 19px YSText;white-space:nowrap;box-shadow:0 2px 8px #0001}.far-bubble{position:absolute;bottom:30px;left:-62px;background:#fff;border-radius:18px;padding:12px;width:190px;box-shadow:0 3px 13px #0002;font:16px/20px YSText}.far-bubble:after{content:'';position:absolute;border:10px solid transparent;border-top-color:white;bottom:-19px;left:65px}.far-bubble>div{display:flex;gap:7px;margin-top:10px}.far-bubble button{border-radius:12px;background:#f1f1ef;flex:1;padding:8px}.far-bubble button:first-child{background:#fce000}
+.page-top{background:#fff;min-height:70px;gap:7px}.page-top h1{font-size:28px}.page-top button{width:36px;flex-shrink:0}.bus-fleet{font-size:13px;color:#999;margin:-12px 0 28px 44px}.boarding-card{background:#f5f4f2;border-radius:24px;padding:20px}.boarding-card>.muted{font-size:13px}.boarding-card h2{font-size:28px;margin:8px 0 24px}.boarding-card button{display:flex;align-items:center;justify-content:space-between;text-align:left;width:100%;padding:0;font-size:16px}.boarding-card small{font-size:13px;color:#999}.quantity-row{display:flex;justify-content:space-between;align-items:center;margin:30px 0 32px;font-size:15px}.quantity-row>div{display:flex;gap:20px;align-items:center}.quantity-row button{width:32px;height:32px;border-radius:50%;background:#f5f4f2;font-size:22px;padding:0}.quantity-row button:disabled{color:#b9b9b7}.bus-checkout h2{font-size:26px}.payment-cards{display:flex;gap:10px;overflow-x:auto;margin:0 -20px;padding:3px 20px 8px;scrollbar-width:none}.payment-cards>button{flex:0 0 128px;border-radius:16px;background:#f5f4f2;height:96px;padding:12px;text-align:left;border:2px solid transparent;position:relative}.payment-cards>button.active{border-color:#fce000}.payment-cards b{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:white;font-family:Arial;font-size:22px}.bank-a{background:#ed342d}.bank-y{background:#222}.bank-t{background:#f9dc3f;color:#222!important}.payment-cards span{display:block;font-size:12px;margin-top:7px}.payment-cards em{position:absolute;right:10px;top:15px;font:600 11px Arial}.cashback{display:flex;gap:12px;align-items:center;margin-top:22px}.cashback>b{background:linear-gradient(135deg,#7667ee,#fa6ec9);color:#fff;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:27px}.cashback strong{font-weight:600;font-size:14px}.cashback small{display:block;color:#999;font-size:12px;margin-top:5px}.payment-terms{font-size:11px;line-height:15px;color:#999;margin:36px 0 20px}.bus-checkout,.train-checkout{padding-bottom:110px!important}.pay-bottom{position:sticky;bottom:-1px;background:#fff;display:flex;align-items:center;gap:28px;padding:14px 0 max(12px,env(safe-area-inset-bottom));margin-top:25px}.pay-bottom>strong{font:800 32px YSDisplay;white-space:nowrap}.pay-bottom .primary{margin:0;border-radius:18px;flex:1;font-weight:600}/* QR screen: Figma 2:27090, with flexible space between header and footer. */
+#overlay.metro-qr{background:#302f2d;color:#fff;padding:0;overflow:hidden}
+.metro-qr .page-top{position:absolute;top:max(59px,env(safe-area-inset-top));left:0;right:0;min-height:64px;padding:0 24px;background:transparent;justify-content:center}
+.metro-qr .page-top h1{font:600 20px/20px YSText,Arial,sans-serif;letter-spacing:-.2px;text-align:center}
+.metro-qr .page-top button{display:none}
+.metro-qr-body{position:absolute;top:123px;bottom:106px;left:0;right:0;padding:0 16px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.metro-qr .qr{flex:none;width:200px;height:200px;border:14px solid #fff;border-radius:24px;margin:30px auto;box-shadow:none;position:relative;background:#fff}
+.metro-qr .qr-brand{position:absolute;left:calc(50% - 15px);top:calc(50% - 15px);background:#fff;color:#ee4738;font:600 28px Arial;width:30px;height:30px}
+.metro-qr-copy{position:relative;flex:none;width:100%}
+.metro-qr h2{flex:none;font:700 24px/27px YSText,Arial,sans-serif;letter-spacing:-.24px;margin:0 0 8px;width:100%}
+.metro-qr p{flex:none;font:400 16px/19px YSText,Arial,sans-serif;color:#fff;margin:0;width:100%}
+.metro-qr small{position:absolute;top:calc(100% + 12px);left:0;right:0;font:400 10px/14px YSText,Arial,sans-serif;color:#aaa}
+.qr-bottom{position:absolute;bottom:max(34px,env(safe-area-inset-bottom));left:8px;right:8px;height:72px;display:grid;grid-template-columns:48px 1fr 48px;align-items:center;gap:8px}
+.qr-bottom .round{width:48px;height:48px;padding:0;color:#fff;background:rgba(0,0,0,.5);box-shadow:none}
+.qr-bottom #scan-qr{justify-self:center;background:rgba(0,0,0,.5);border-radius:100px;height:56px;padding:0 16px;color:#fff;font:600 16px/17px YSText,Arial,sans-serif;letter-spacing:-.08px;white-space:nowrap}
+.qr-bottom #flashlight{opacity:.5}
+.qr-bottom #flashlight[aria-pressed=true]{background:#fce000;color:#222;opacity:1}
+@media(max-height:600px){.metro-qr .page-top{top:12px}.metro-qr-body{top:76px;bottom:92px;padding-bottom:16px}.metro-qr .qr{margin:16px auto}.qr-bottom{bottom:20px}}
+.train-fields{background:#f5f4f2;border-radius:20px;padding:0 15px;margin:14px 0 10px}.train-fields>button,.train-fields>label{display:flex;align-items:center;gap:15px;height:56px;width:100%;text-align:left;font-size:16px}.train-fields>label{border-top:1px solid #ddd}.train-fields input{min-width:0;border:0;outline:none;background:none;font-size:16px;flex:1}.train-fields label>span{background:#fce000;width:27px;height:27px;border-radius:8px;text-align:center;line-height:27px}.station-choice{border-bottom:1px solid #eee;border-radius:0;background:white;margin:0;padding:22px 0}.station-choice span{flex:1}.local-time{font-size:12px;color:#999;margin:-8px 0 20px 40px}.train-result{border-radius:22px;background:#f5f4f2;padding:20px 16px;margin:14px 0}.train-times{display:flex;justify-content:space-between;align-items:center}.train-times strong{font-size:27px;font-weight:600}.train-times span{font-size:12px;color:#92928e}.train-platform{display:flex;gap:12px;align-items:center;font-size:11px;color:#aaa;margin:6px 0 22px}.train-platform i{flex:1;height:2px;background:#ddd}.train-result-bottom{display:flex;align-items:center;gap:12px}.train-result-bottom>div{flex:1}.train-result-bottom b{font-size:12px;color:#00985f;background:#e6f4dc;border-radius:5px;padding:3px}.train-result-bottom small{display:block;font-size:10px;margin-top:10px;color:#999}.fare{background:#fce000;border-radius:16px;padding:12px 17px;font-weight:600;font-size:18px}.transport-chips{display:flex;gap:8px}.transport-chips button{padding:12px 14px;background:#f5f4f2;border-radius:18px}.transport-chips .active{background:#222;color:#fff}.taxi-card{display:flex;justify-content:space-between;border:2px solid #fce000;border-radius:24px;padding:20px}.taxi-card strong{font-size:21px}.taxi-card p{color:#999;font-size:13px}.taxi-card>b{text-align:right;line-height:26px}
+@media(max-height:700px){header{top:22px}.sheet{height:55%}#map{bottom:calc(55% - 32px)}.layer-switch{bottom:calc(55% + 68px)}.map-tools{bottom:calc(55% + 10px)}.wallet-card{height:145px}.stop-card{padding-top:9px}.stop-heading{margin-bottom:4px}.route-row{min-height:51px;height:51px}.search-dock{bottom:14px;height:58px}}
+@media(min-width:600px){header{top:46px}.sheet{height:51%}}@media(max-width:360px){.stop-title{font-size:22px}.route-main{gap:7px}.arrival{font-size:13px}.route-info .sub{font-size:10px}.wallet-label{font-size:10px}.search-main{font-size:14px}}
+.pin-inner.selected+.stop-dot{box-shadow:0 0 0 5px #f5f5ef}.layer-switch button[data-layer=metro].selected img{filter:invert(36%) sepia(99%) saturate(2799%) hue-rotate(337deg) brightness(104%) contrast(103%)}
+
+.bus-fleet{margin:0 0 24px 44px}.local-time{margin:0 0 20px 40px}
+#overlay.bus-checkout,#overlay.train-checkout{display:flex;flex-direction:column;padding-bottom:18px!important}
+#overlay[hidden]{display:none!important}.bus-checkout>*{flex-shrink:0}.bus-checkout .pay-bottom,.train-checkout .pay-bottom{margin-top:auto;padding-top:24px}.far-route-content{padding:0 16px}.far-route-content h2{font-size:27px;margin:18px 0}.far-route-content .route-fields{margin-top:0}
+.mode-icon .asset-icon{filter:brightness(0) invert(1)}.troika-logo,.settings-icon{width:15px;height:15px}.settings-icon{filter:brightness(0) invert(1)}
+
+/* Original icon exports supplied for the research UI. */
+.ui-icon{display:inline-block;object-fit:contain;vertical-align:middle;flex-shrink:0}
+.chevron-disc{display:inline-block;width:24px;height:24px;border-radius:0;background:none;object-fit:contain}
+.stop-title .chevron-disc{vertical-align:-5px}.origin .chevron-disc{width:20px;height:20px}
+.pin-inner.bus .pin-icon{background:transparent}.pin-inner.bus .pin-icon>img{width:100%;height:100%}
+.troika-logo,.trips-icon{width:16px;height:16px;object-fit:contain;flex-shrink:0}
+.troika-logo{filter:brightness(0) invert(1);opacity:.5}.trips-icon{opacity:.5}
+.vehicle-label{right:29px;top:50%;transform:translateY(-50%);border-radius:22px 22px 0 22px;padding:4px 10px;color:#009ff5;font:400 22px/24px YSText;box-shadow:none;z-index:1}
+.vehicle-label b{font-weight:400}
+
+.service-icon{background:none;box-shadow:none;overflow:hidden}.service-icon img{width:100%;height:100%;object-fit:contain}
+.heart-glyph{background:currentColor;mask:url('assets/heart.png') center/contain no-repeat;-webkit-mask:url('assets/heart.png') center/contain no-repeat}
+.heart-glyph.is-selected{color:#ee655b}
+
+/* Pin geometry: the point of the tail and the ground dot share one anchor. */
+.heart-glyph{background:none;mask:none;-webkit-mask:none}.heart-glyph.is-selected{color:inherit}
+.stop-pin{border:0;background:none}.pin-inner{position:absolute;left:0;top:0;bottom:auto;width:max-content;padding:3px;transform:translate(-50%,-50%);border-radius:10px;gap:6px}
+.pin-inner .pin-icon{width:22px;height:22px;overflow:hidden;border-radius:7px;flex-shrink:0}
+.pin-inner.selected{top:auto;bottom:18px;left:0;transform:translateX(-50%);padding:4px 10px 4px 4px;border-radius:17px;gap:6px;box-shadow:0 3px 12px #0002}
+.pin-inner.selected .pin-icon{width:40px;height:40px;border-radius:13px}.pin-inner.selected .pin-icon>img{width:100%;height:100%}
+.pin-label{line-height:17px;font-size:14px;font-weight:400}.pin-inner small{margin:0;font-size:12px;line-height:14px}
+.bubble-tail{position:absolute;top:calc(100% - 1px);left:50%;transform:translateX(-50%);overflow:visible}
+.stop-dot{left:-5px;top:-5px;width:10px;height:10px;box-shadow:none!important}
+.pin-inner.metro{background:white}.pin-inner.metro .pin-icon{background:#ff4135;padding:3px}.pin-inner.metro.selected{padding:4px;border-radius:18px}.pin-inner.metro.selected .pin-icon{width:40px;height:40px;border-radius:14px;padding:7px}
+.far-bubble{left:0;bottom:18px;transform:translateX(-50%)}.far-bubble:after{display:none}
+.vehicle-body{position:relative;z-index:2;width:26px;height:52px;transform-origin:center}.vehicle-label{left:50%;right:auto;top:50%;transform:translate(-50%,-50%);font-size:18px;line-height:20px;padding:3px 8px;border-radius:16px 16px 0 16px}
+.live-rows{height:112px;overflow:hidden}.rows-changed .route-row{animation:arrival-row .35s ease-out}@keyframes arrival-row{from{transform:translateY(24px);opacity:.4}to{transform:translateY(0);opacity:1}}
+@media(max-height:700px){.live-rows{height:102px}}
+@media(prefers-reduced-motion:reduce){.rows-changed .route-row{animation:none}}
+
+.stop-pin .pin-inner{left:14px;top:14px}.stop-pin .pin-inner.selected{top:auto;bottom:32px}.stop-pin .stop-dot{left:9px;top:9px}.stop-pin .far-bubble{left:14px;bottom:32px}
+
+/* Supplied static transport-card screen; the entire surface dismisses it. */
+#troika-modal{position:absolute;inset:0;z-index:2000;overflow:hidden}
+.troika-modal-dismiss{display:block;position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:transparent;border-radius:0;touch-action:manipulation}
+.troika-modal-dismiss:active{transform:none}.troika-modal-dismiss img{display:block;width:100%;height:100%;object-fit:fill;user-select:none}
+
+/* Figma 79:48836: export only the sheet; never stretch it to the viewport. */
+#troika-modal{background:#0008}
+.troika-modal-dismiss{display:flex;align-items:flex-end;justify-content:center}
+.troika-modal-dismiss img{position:absolute;bottom:0;width:100%;height:auto;max-height:100%;object-fit:contain;object-position:center bottom}
+
+/* Figma 75:47275: live stop detail replaces the content of the existing sheet. */
+.stop-view .search-dock,.stop-view>header,.stop-view .layer-switch{display:none}
+.stop-view .sheet{border-radius:24px 24px 0 0}
+.stop-view #sheet-body{display:flex;flex-direction:column;padding:0 0 max(16px,env(safe-area-inset-bottom));overflow:hidden}
+.stop-detail-heading{display:flex;align-items:flex-start;justify-content:space-between;padding:4px 16px 12px;flex-shrink:0}
+.stop-detail-heading h1{font-size:24px;line-height:28px;margin:0}
+.stop-detail-heading p{display:flex;align-items:center;gap:4px;margin:3px 0 0;font-size:13px;color:#92928e}
+.stop-detail-heading .heart{padding:0;width:32px;height:32px}
+.stop-detail-routes{overflow-y:auto;min-height:0;flex:1;padding:0 16px 0 12px}
+.stop-detail-routes .route-row{height:64px;min-height:64px;position:relative}
+.stop-detail-routes .route-row:not(:last-child):after{position:absolute;content:'';height:.5px;background:#deddda;left:44px;right:0;bottom:0}
+.stop-detail-routes .route-info .sub{font-size:13px;line-height:17px}
+.stop-detail-routes .arrival{font-size:16px}
+.stop-directions{display:flex;gap:8px;padding:8px 8px 0;flex-shrink:0}
+.stop-directions button{flex:1;height:48px;background:#f5f4f2;border-radius:16px;font-size:16px}
+#stop-back{position:absolute;bottom:calc(51% + 10px);left:12px;z-index:450;display:grid;place-items:center}
+.stop-view:has(.sheet.expanded) #stop-back{bottom:calc(84% + 10px)}
+@media(max-height:700px){#stop-back{bottom:calc(55% + 10px)}}
+
+/* Figma 2:24626: checkout spacing and assets, with working quantity/payment. */
+#overlay.bus-checkout{padding:0!important;overflow:hidden;background:#fff}
+.bus-checkout .page-top{height:56px;min-height:56px;padding:8px 12px;margin:0;border:0;flex-shrink:0}
+.bus-checkout .page-top h1,.bus-checkout #page-close{display:none}
+.bus-checkout .checkout-content{overflow-y:auto;min-height:0;flex:1;flex-shrink:1}
+.checkout-bus-heading{display:flex;gap:12px;align-items:center;padding:4px 16px 20px}
+.checkout-bus-heading h1{font-size:24px;line-height:28px;margin:0}
+.checkout-bus-heading p{font-size:13px;color:#92928e;margin:2px 0 0}
+.checkout-bus-icon{background:#009ff5;border-radius:12px;width:40px;height:40px;display:grid;place-items:center}
+.checkout-bus-icon img{filter:brightness(0) invert(1)}
+.bus-checkout .boarding-card{margin:0 16px;padding:4px 16px;border-radius:24px}
+.bus-checkout .boarding-route{padding:12px 0;border-bottom:.5px solid #d5d3d1;font-size:16px;line-height:22px}
+.bus-checkout .boarding-card small{display:block;font-size:13px;line-height:17px;color:#92928e;margin-bottom:1px}
+.bus-checkout .boarding-card button{padding:12px 0;min-height:60px;line-height:22px}
+.bus-checkout .boarding-card button span span{display:block}
+.bus-checkout .quantity-row{margin:8px 16px 16px;padding:12px 8px 12px 16px;min-height:64px;background:#f5f4f2;border-radius:24px;font-size:16px;gap:8px}
+.bus-checkout .quantity-row>div{gap:0;border-radius:22px;background:#fff;flex:0 0 144px;height:40px;justify-content:space-between}
+.bus-checkout .quantity-row button{width:44px;height:40px;background:transparent;font-size:26px}
+.bus-checkout .quantity-row>span{line-height:20px}
+.checkout-payment{padding:16px 0;border-top:2px solid #faf9f7;border-bottom:2px solid #faf9f7}
+.bus-checkout h2{font-size:24px;line-height:28px;margin:0 16px 12px}
+.bus-checkout .payment-cards{margin:0;padding:4px 16px 16px;gap:8px;overflow-y:hidden}
+.bus-checkout .payment-cards>button{flex:0 0 120px;height:76px;padding:8px 10px;border:0;border-radius:12px}
+.bus-checkout .payment-cards>button.active{outline:2px solid #21201f;outline-offset:2px}
+.bus-checkout .bank-logo{display:block;width:24px;height:24px;object-fit:contain}
+.bus-checkout .payment-cards span{font-size:13px;font-weight:600;margin-top:12px}
+.bus-checkout .payment-brand{position:absolute;width:21px;height:14px;object-fit:contain;right:10px;bottom:10px}
+.bus-checkout .payment-cards .plus-balance{top:0;right:0;color:#aa46cf;background:#fff;border-radius:12px;padding:2px 4px;font-size:10px;box-shadow:0 2px 5px #0001}
+.bus-checkout .cashback{margin:0 16px;padding:10px 12px;gap:10px;border-radius:16px;background:#f5f4f2;min-height:56px}
+.bus-checkout .cashback>img{width:32px;height:32px;object-fit:contain}
+.bus-checkout .cashback>div{flex:1;min-width:0}
+.bus-checkout .cashback strong{font-size:16px;font-weight:400;line-height:20px}
+.bus-checkout .cashback small{font-size:13px;line-height:17px;margin-top:0}
+.bus-checkout .payment-terms{font-size:13px;line-height:17px;margin:30px 16px 20px;color:#9e9b98}
+.bus-checkout .pay-bottom{position:relative;bottom:auto;flex-shrink:0;gap:16px;justify-content:space-between;margin:0;padding:8px 8px max(16px,env(safe-area-inset-bottom)) 16px;border-radius:24px 24px 0 0;box-shadow:0 -8px 24px #00000009}
+.bus-checkout .pay-bottom>strong{font:600 24px/28px YSText}
+.bus-checkout .pay-bottom .primary{flex:0 1 64%;height:56px;min-height:56px;border-radius:16px;font-size:16px}
+@media(max-width:360px){.bus-checkout .quantity-row{font-size:14px}.bus-checkout .quantity-row>div{flex-basis:120px}.bus-checkout .cashback strong{font-size:14px}.bus-checkout .cashback small{font-size:11px}}
+.stop-view #sheet-body{flex:1;min-height:0;padding-bottom:max(24px,env(safe-area-inset-bottom))}
+
+/* Figma 2:32311: scheduled departure and overdue status, without a live ETA dot. */
+.arrival.scheduled-delay{display:flex;flex-direction:column;align-items:flex-end;gap:1px;flex-shrink:0;color:#fa3e2c;font:600 16px/17px YSText;letter-spacing:-.08px}
+.arrival.scheduled-delay small{font:400 13px/14px YSText;letter-spacing:0}
+.arrival.scheduled-delay time{font:inherit;color:inherit}
+
+.arrival.scheduled-time{color:#21201f;font:600 16px/17px YSText;letter-spacing:-.08px}
+.arrival{transition:color .18s ease}
+
+/* A shared, centered live marker in both arrival previews and stop details. */
+.live-eta{display:inline-flex;align-items:center;vertical-align:middle;white-space:nowrap;line-height:17px}
+.live-eta-dot{display:inline-flex;align-items:center;justify-content:center;flex:0 0 12px;width:12px;height:17px}
+.live-eta-dot>img{display:block;flex:none;animation:live-eta-blink 1.6s ease-in-out infinite}
+@keyframes live-eta-blink{0%,100%{opacity:1}50%{opacity:.2}}
+@media(prefers-reduced-motion:reduce){.live-eta-dot>img{animation:none;opacity:1}}
+
+.dots[hidden]{display:none}
+
+.stop-pin .pin-inner.selected.pin-below{top:34px;bottom:auto}
+.pin-inner.pin-below .bubble-tail{top:auto;bottom:calc(100% - 1px);transform:translateX(-50%) rotate(180deg)}
+
+/* Long stop names keep their actions visible and history on a separate line. */
+.stop-title{display:flex;align-items:center;gap:4px;flex:1;min-width:0;text-align:left}
+.stop-title-text{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stop-title .chevron-disc{flex-shrink:0}
+.stop-heading .heart{flex-shrink:0}
+.pin-label{min-width:0;max-width:190px}
+.pin-name{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* White fade follows the search footer in the research Figma screens. */
+.search-dock::before{content:'';position:absolute;z-index:-2;pointer-events:none;left:-24px;right:-24px;top:-47px;bottom:calc(-1 * max(24px,env(safe-area-inset-bottom)));background:linear-gradient(180deg,rgba(255,255,255,.01),rgba(255,255,255,.94) 62%,#fff)}
+.day-schedule-open{display:flex;justify-content:space-between;margin:0 16px 12px;padding:14px 16px;border-radius:16px;background:#f5f4f2;font-size:15px;flex-shrink:0}.route-view #sheet-body>.day-schedule-open{width:calc(100% - 32px)}.bus-board-page{padding:0}.bus-board-page .route-row{min-height:72px}.payment-pending .page-top{display:none}.payment-loading{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.payment-loading h1{font-size:24px;margin:24px 0 8px}.payment-loading p{color:#898784;font-size:15px}.payment-spinner{width:44px;height:44px;border:4px solid #eeedeb;border-top-color:#222;border-radius:50%;animation:payment-spin .8s linear infinite}@keyframes payment-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.payment-spinner{animation-duration:2s}}
+
+/* The capsule and its Figma shadow sit above the footer fade. */
+.search-dock::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;background:#fff;box-shadow:0 16px 32px 0 rgba(0,0,0,.32)}
+
+.stop-group-loading{position:absolute;inset:16px 0 auto;z-index:10;min-height:175px;background:#f5f4f2;display:grid;place-items:center;border-radius:24px;font:16px YSText;box-shadow:0 2px 12px #0001}.origin-location{width:34px;height:34px;background:white;border-radius:50%;display:grid;place-items:center;box-shadow:0 2px 10px #0003;transform:translate(-5px,-5px)}
+
+/* A tram-only platform must not show the combined bus/tram symbol. */
+.pin-inner.bus.tram-stop .pin-icon{background:#3999ed;padding:3px}
+.pin-inner.bus.tram-stop .pin-icon .asset-icon{width:100%!important;height:100%!important;filter:brightness(0) invert(1)}
+
+/* Shift the station label without moving its tail or map anchor. */
+.pin-inner.train.selected{transform:translateX(calc(-50% + var(--pin-offset-x, 0px)))}
+.pin-inner.train.selected .bubble-tail{left:calc(50% - var(--pin-offset-x, 0px))}
+
+.route-info .no-boarding{display:block;color:#ff4438;font-size:12px;line-height:16px}

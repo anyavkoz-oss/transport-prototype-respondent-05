@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon Troika">
+<path id="Subtract" d="M10.957 1.04395C13.1659 1.04428 14.957 2.83501 14.957 5.04395V10.9561C14.957 13.165 13.1659 14.9557 10.957 14.9561H5.04395C2.83481 14.9561 1.04297 13.1652 1.04297 10.9561V5.04395C1.04297 2.83481 2.83481 1.04395 5.04395 1.04395H10.957ZM4.96191 4.61914C4.54791 4.61939 4.21191 4.95508 4.21191 5.36914C4.21199 5.78313 4.54796 6.11889 4.96191 6.11914H7.25V11.2646C7.25019 11.6787 7.58597 12.0146 8 12.0146C8.4141 12.0146 8.74981 11.6787 8.75 11.2646V6.11914H11.0371C11.4511 6.11889 11.787 5.78314 11.7871 5.36914C11.7871 4.95508 11.4511 4.61939 11.0371 4.61914H4.96191Z" fill="url(#paint0_linear_0_1343)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_1343" x1="2.72562" y1="4.30806" x2="17.4648" y2="6.29799" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1D6EB9"/>
+<stop offset="0.395938" stop-color="#247CBE"/>
+<stop offset="1" stop-color="#49BCD7"/>
+</linearGradient>
+</defs>
+</svg>

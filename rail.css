@@ -1,0 +1,117 @@
+.field-icon{display:block;width:24px;height:24px;object-fit:contain;flex-shrink:0}
+.route-fields #swap{width:24px;height:40px;top:36px;display:grid;place-items:center}
+.layer-switch button[data-layer=metro] .asset-icon{background:#21201f;mask:url('assets/metro-active.svg') center/24px 24px no-repeat;-webkit-mask:url('assets/metro-active.svg') center/24px 24px no-repeat}
+.layer-switch button[data-layer=metro].selected .asset-icon{background:#fa3e2c}
+.layer-switch button[data-layer=metro] img{visibility:hidden;filter:none!important}
+.layer-switch button[data-layer=train].selected{background:#efeeee;color:#21201f;opacity:1}
+.layer-switch button[data-layer=train] img{filter:none}
+.rail-icon{display:block;width:24px;height:24px;object-fit:contain;flex-shrink:0}
+#overlay.metro-stations-screen{padding:52px 0 var(--keyboard-inset,0);background:#0008;display:flex;flex-direction:column;overflow:hidden}
+.metro-stations-screen>.page-top{display:none}
+.metro-station-sheet{background:#fff;border-radius:24px 24px 0 0;flex:1;min-height:0;display:flex;flex-direction:column}
+.metro-station-sheet .picker-handle{margin:4px auto 8px}
+.station-fields{position:relative;margin:0 8px 4px;border-radius:20px;background:#fff;box-shadow:0 8px 20px #0000001f;flex-shrink:0;z-index:1}
+.station-field{display:flex;align-items:center;min-height:56px;position:relative;padding-right:12px}
+.station-field+.station-field:before{content:'';position:absolute;top:0;height:.5px;background:#deddda;left:56px;right:12px}
+.station-field-symbol{width:40px;height:40px;margin:0 8px;flex-shrink:0;display:grid;place-items:center;border-radius:12px}
+.station-field.editing .station-field-symbol{background:#fce000}
+.station-field label{display:block;min-width:0;flex:1;font-size:16px;line-height:17px}
+.station-field small{display:block;font-size:13px;line-height:14px;color:#92928e;margin-bottom:1px}
+.station-field input,.station-field label>button{display:block;border:0;outline:none;background:none;font:16px/20px YSText;width:100%;min-width:0;text-align:left;padding:0;border-radius:0;color:#21201f;caret-color:#0596fa}
+.station-field input::placeholder{color:#92928e}
+.metro-stations-screen .station-field:first-child{padding-right:40px}
+#station-close{position:absolute;right:4px;top:8px;height:40px;width:32px;display:grid;place-items:center;padding:0}
+#metro-station-list{overflow:auto;min-height:0;flex:1;padding:0 16px 12px}
+.metro-station-row{display:flex;gap:12px;align-items:center;min-height:56px;width:100%;text-align:left;padding:0;font:16px/17px YSText}
+.line-badge{height:32px;width:32px;display:grid;place-items:center;flex-shrink:0;border-radius:50%;color:#fff;font:600 13px/14px YSText}
+.metro-station-row>span:last-child{min-width:0;flex:1}
+.metro-station-row small{display:block;color:#92928e;font-size:13px;line-height:14px;margin-top:1px}
+.metro-station-row em{font-style:normal;color:#e97500}
+#overlay.rail-search-screen{padding:0 0 var(--keyboard-inset,0);background:#f5f4f2;display:flex;flex-direction:column;overflow:hidden}
+.rail-search-screen .page-top,.rail-schedule-screen .page-top{height:64px;min-height:64px;margin:0;padding:0 12px;background:#fff;position:relative;flex-shrink:0}
+.rail-search-screen .page-top h1,.rail-schedule-screen .page-top h1{position:absolute;left:56px;right:56px;text-align:center;font:600 16px/17px YSText;pointer-events:none}
+.rail-search-screen #page-close,.rail-schedule-screen #page-close{display:none}
+.rail-search-fields{background:#fff;position:relative;padding-right:48px;border-radius:0 0 24px 24px;flex-shrink:0}
+.rail-search-fields .station-field-symbol .asset-icon img{opacity:1}
+#rail-swap,#schedule-swap{position:absolute;right:8px;top:36px;width:40px;height:40px;display:grid;place-items:center;padding:0}
+#rail-station-list{background:#fff;margin-top:6px;border-radius:24px 24px 0 0;flex:1;min-height:0;overflow:auto;padding-bottom:12px}
+.rail-station-row{display:flex;align-items:center;gap:0;min-height:56px;width:100%;padding:0 16px 0 0;text-align:left;font:16px/20px YSText}
+.rail-station-row>span:first-child{width:56px;flex-shrink:0;display:grid;place-items:center;opacity:.22}
+.rail-station-row>span:last-child{align-self:stretch;display:flex;align-items:center;flex:1;border-bottom:.5px solid #ddd;min-width:0;padding:10px 0}
+.rail-station-row:last-child>span:last-child{border:0}
+#overlay.rail-schedule-screen{padding:0 0 max(16px,env(safe-area-inset-bottom));background:#fff}
+.rail-schedule-screen .page-top h1{top:18px}
+.rail-local-time{position:absolute;top:37px;left:56px;right:56px;z-index:3;text-align:center;color:#92928e;font:13px/14px YSText;pointer-events:none}
+#rail-refresh{position:absolute;right:8px;top:12px;width:40px;height:40px;display:grid;place-items:center;z-index:3;padding:0}
+.schedule-fields{position:relative;padding-right:48px}
+.schedule-field{display:flex;align-items:center;gap:16px;width:100%;height:56px;text-align:left;padding:0 0 0 16px;font:16px/20px YSText}
+.schedule-field span{align-self:stretch;display:flex;align-items:center;flex:1;min-width:0}
+.schedule-field:first-child span{border-bottom:.5px solid #ddd}
+.rail-filters{display:flex;gap:4px;padding:8px 12px;height:56px}
+.rail-filters button{height:40px;padding:0 14px;background:#efeeee;border-radius:24px;font:600 13px/14px YSText}
+.rail-results{display:flex;flex-direction:column;gap:8px;padding:12px 12px 8px}
+.rail-result{background:#f5f4f2;border-radius:24px;padding-top:12px;overflow:hidden}
+.rail-times{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 16px}
+.rail-times>div:last-child{text-align:right}
+.rail-times strong{display:block;font:600 28px/28px YSText;letter-spacing:-1.5px}
+.rail-times small,.rail-times>span{display:block;font:13px/14px YSText;color:#92928e}
+.rail-track{height:32px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.rail-track img{width:auto;height:32px;max-width:100%;object-fit:fill}
+.rail-result-footer{display:flex;align-items:flex-end;gap:8px;padding:4px 12px 12px 16px}
+.rail-result-footer>div{flex:1;min-width:0}
+.rail-result-footer b{display:block;font:600 16px/17px YSText;color:#5ac31a;margin-bottom:4px}
+.rail-result-footer small{display:block;font:13px/14px YSText;color:#92928e}
+.rail-result-footer button{width:100px;height:48px;flex-shrink:0;background:#fce000;border-radius:16px;padding:0;font:600 16px/17px YSText}
+
+.rail-station-row>span:first-child:has(img[src*="airport"]){opacity:1}
+
+/* Train checkout — Figma 133:30589. */
+#overlay.rail-checkout{padding:44px 0 0!important;overflow:hidden;display:flex;flex-direction:column;background:#fff;color:#21201f}
+.rail-checkout>.page-top{position:relative;flex:none;min-height:56px;height:56px;padding:0;background:#fff}
+.rail-checkout .page-top #page-back{margin:0;width:56px;height:56px;padding:16px}
+.rail-checkout .page-top h1,.rail-checkout .page-top #page-close{display:none}
+.rail-checkout-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:none}
+.rail-ticket-info{padding:0 16px 16px}
+.rail-checkout-heading{height:64px;display:flex;align-items:center;gap:8px;padding-bottom:8px}
+.rail-checkout-heading>span{width:40px;height:40px;border-radius:12px;background:#84878a;display:grid;place-items:center;flex:none}
+.rail-checkout-heading h1{font:800 24px/25px YSDisplay,Arial,sans-serif;margin:0 0 4px;letter-spacing:0}
+.rail-checkout-heading p{font:400 13px/14px YSText,Arial,sans-serif;color:#9e9b98;margin:0}
+.rail-ticket-details{border-radius:24px;background:#f5f4f2;padding:4px 16px;overflow:hidden}
+.rail-ticket-details small{display:block;font:400 13px/14px YSText,Arial,sans-serif;color:#9e9b98}
+.rail-ticket-details p{font:400 16px/19px YSText,Arial,sans-serif;margin:4px 0 0;overflow-wrap:anywhere}
+.rail-ticket-route{padding:12px 0 16px}
+.rail-ticket-validity{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:16px 0;border-block:.5px solid rgba(138,135,132,.4)}
+.rail-ticket-validity p{line-height:17px;margin-top:1px}
+.rail-ticket-tariff{display:flex;align-items:center;text-align:left;gap:8px;width:calc(100% + 8px);padding:16px 0 12px}
+.rail-ticket-tariff>span{flex:1;min-width:0}
+.rail-ticket-tariff strong{display:block;font:400 16px/17px YSText,Arial,sans-serif;margin-bottom:12px}
+.rail-ticket-tariff small{line-height:15px}
+.rail-ticket-tariff>img{flex:none}
+.rail-ticket-quantity{display:flex;align-items:center;gap:8px;padding:12px 12px 12px 16px;min-height:64px;margin-top:8px;border-radius:24px;background:#f5f4f2;font:400 16px/19px YSText,Arial,sans-serif}
+.rail-ticket-quantity>span{flex:1;min-width:0}
+.rail-ticket-quantity>div{display:flex;align-items:center;justify-content:space-between;border-radius:12px;background:#fff;width:144px;height:40px;flex:none}
+.rail-ticket-quantity button{height:40px;width:40px;padding:0;font:400 24px/24px YSText,Arial,sans-serif}
+.rail-ticket-quantity button:disabled{color:#c5c3bf;cursor:default}
+.rail-ticket-quantity output{font:600 16px/17px YSText,Arial,sans-serif}
+.rail-payment-section{border-top:2px solid #f5f4f2;border-bottom:2px solid #f5f4f2;padding-bottom:16px;border-radius:24px 24px 0 0}
+.rail-payment-section h2{height:56px;display:flex;align-items:center;margin:0;padding:0 16px;font:800 24px/25px YSDisplay,Arial,sans-serif;letter-spacing:0}
+.rail-payment-cards{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:4px 16px 16px;scroll-padding-inline:16px}
+.rail-payment-card{position:relative;flex:0 0 120px;height:76px;background:#f5f4f2;border-radius:12px;padding:0;display:flex;flex-direction:column;text-align:left}
+.rail-payment-card.active{outline:2px solid #21201f;outline-offset:2px}
+.rail-bank-logo{height:38px;width:38px;display:grid;place-items:center;flex:none}
+[data-rail-payment="1"] .rail-bank-logo{width:46px}
+.rail-bank-bottom{padding:0 10px 10px;display:flex;justify-content:space-between;align-items:flex-end;flex:1;width:100%;font:600 13px/14px YSText,Arial,sans-serif}
+.rail-bank-bottom>img{flex:none}
+.rail-plus-badge{position:absolute;top:-4px;right:-4px;display:flex;align-items:center;gap:2px;border-radius:100px;background:#fff;box-shadow:0 2px 5px #0002;padding:2px 4px 2px 2px;height:16px;font:600 11px/13px YSText,Arial,sans-serif;color:#8f05bc;letter-spacing:.11px}
+.rail-add-card{background:#fff;border:.5px solid rgba(138,135,132,.4)}
+.rail-payment-cashback{display:flex;align-items:center;gap:8px;text-align:left;padding:0 16px;margin:0 16px;width:calc(100% - 32px);height:56px;border-radius:16px;background:#f5f4f2}
+.rail-payment-cashback>img{flex:none}
+.rail-payment-cashback>span{flex:1;min-width:0}
+.rail-payment-cashback strong{display:block;font:400 16px/17px YSText,Arial,sans-serif}
+.rail-payment-cashback small{display:block;font:400 13px/14px YSText,Arial,sans-serif;color:#9e9b98;margin-top:1px}
+.rail-payment-terms{font:400 13px/17px YSText,Arial,sans-serif;color:#9e9b98;padding:16px;margin:0}
+.rail-pay-footer{position:relative;flex:none;display:flex;align-items:center;gap:0;padding:8px 8px max(42px,env(safe-area-inset-bottom));border-radius:24px 24px 0 0;box-shadow:0 -4px 20px #0002;background:#fff}
+.rail-pay-footer>strong{padding:0 8px;min-width:138px;font:600 24px/27px YSText,Arial,sans-serif;letter-spacing:-.24px}
+.rail-pay-footer>.primary{flex:1;min-width:108px;width:auto;height:56px;margin:0;padding:16px;border-radius:16px;font:600 16px/17px YSText,Arial,sans-serif;letter-spacing:-.08px}
+@media(max-width:350px){.rail-ticket-quantity>div{width:112px}.rail-payment-cashback{padding:0 8px}.rail-payment-cashback strong{font-size:14px}.rail-payment-cashback small{font-size:11px}}
+@media(max-height:650px){#overlay.rail-checkout{padding-top:8px!important}.rail-pay-footer{padding-bottom:max(12px,env(safe-area-inset-bottom))}}

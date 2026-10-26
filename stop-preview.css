@@ -1,0 +1,25 @@
+/* Figma 160:21699: opt-in compact stop preview, shared live departure data. */
+.stop-card.stop-card-chips{padding:0;flex-basis:calc(100% - 40px);border-radius:24px;background:#f5f4f2;align-self:flex-start;height:148px;min-height:148px;max-height:148px}
+.stop-card-chips .stop-heading{height:56px;margin:0;padding:0 16px;gap:8px}
+.stop-card-chips .stop-title{font-size:24px;line-height:25px;max-width:calc(100% - 40px);min-height:44px}
+.stop-card-chips .stop-heading .heart{min-width:32px;min-height:44px}
+.stop-card-chips .chip-list{position:relative;display:flex;flex-wrap:wrap;justify-content:flex-start;align-content:flex-start;gap:4px;height:92px;min-height:92px;padding:0 16px 8px 8px;overflow:hidden;isolation:isolate}
+.route-chip,.chip-more{border-radius:100px;background:#fff;height:40px;display:flex;align-items:center;flex:0 0 auto;padding:0 12px 0 0;max-width:100%;font-size:16px;line-height:17px;font-weight:600;letter-spacing:-.08px}
+.route-chip{min-width:0;gap:0;width:max-content;overflow:hidden;transform-origin:center}
+.route-chip[data-chip-slot="2"]{max-width:calc(100% - 76px)}
+.route-chip .chip-eta{min-width:0}
+.route-chip .live-eta{min-width:0}
+.route-chip .live-eta>span:last-child{overflow:hidden;text-overflow:ellipsis}
+.route-chip.chip-exit{pointer-events:none;z-index:2}
+.chip-lead{width:40px;height:40px;display:grid;place-items:center;flex-shrink:0}
+.chip-icon{position:relative;width:24px;height:24px;border-radius:50%;background:#0596fa;display:grid;place-items:center}
+.chip-number{color:#0596fa;white-space:nowrap}
+.route-chip .chip-eta{font-size:16px;line-height:17px;display:flex;align-items:center;margin-left:8px;color:#029154;font-weight:600}
+.route-chip .chip-eta.scheduled-time{color:#21201f}
+.route-chip .chip-eta.scheduled-delay{color:#fa3e2c;line-height:17px}
+.chip-delay-badge{display:none;position:absolute;left:15.82px;top:15.12px}
+.route-chip:has(.scheduled-delay) .chip-delay-badge{display:block}
+.chip-more{padding:0 12px;color:#21201f;position:relative;z-index:3}
+
+.chip-one-time .chip-next-time{display:none}
+@media(max-width:360px){.chip-lead{width:32px}.route-chip,.chip-more,.route-chip .chip-eta{font-size:14px}}

@@ -1,0 +1,31 @@
+.station-preview{margin:0 16px 20px;padding:12px 8px 7px;border-radius:24px}
+.station-preview .stop-heading{padding:0 6px;margin-bottom:12px}
+.station-preview .stop-title{display:flex;align-items:center;gap:4px;max-width:calc(100% - 34px)}
+.station-preview .stop-title-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.station-preview .chevron-disc{flex-shrink:0}
+.station-preview-rows{height:112px}
+.station-run{display:flex;align-items:center;gap:12px;width:100%;min-width:0;height:56px;padding:0 8px;text-align:left;background:none}
+.station-train-icon{background:#84878a!important;flex:0 0 32px;display:grid;place-items:center}
+.station-train-icon>img{width:21px;height:21px;object-fit:contain;filter:brightness(0) invert(1)}
+.station-run-text{min-width:0;flex:1;display:flex;flex-direction:column;gap:2px;font:400 16px/17px YSText}
+.station-run-text small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#92928f;font:400 13px/14px YSText}
+.station-run time{flex-shrink:0;color:#21201f;font:700 16px/19px YSText;letter-spacing:-.5px}
+.station-run-time{flex-shrink:0;text-align:right;display:flex;flex-direction:column;gap:6px}
+.station-run-time small{color:#92928f;font:400 13px/16px YSText}
+.station-no-boarding{color:#ff4433;font:400 14px/18px YSText;margin-top:7px}
+.station-express .station-train-icon{background:#354884!important}
+.station-board-runs{margin:0 16px}
+.station-board-runs .station-run{height:auto;min-height:88px;padding:16px 0;align-items:flex-start}
+.station-board-runs .station-run-text{line-height:20px}
+.station-board-runs .station-run-text small{white-space:normal;line-height:16px}
+.station-run-detail{padding:24px 20px}
+.station-run-detail h2{font-size:26px;margin:20px 0}
+.station-departure-info{display:flex;justify-content:space-between;gap:16px;align-items:center;background:#f5f4f2;padding:20px 16px;border-radius:20px;margin-bottom:28px;line-height:23px}
+.station-departure-info time{font-size:24px;font-weight:600}
+.route-stop-here{display:block;color:#969693;font:400 13px/16px YSText;margin-top:3px}
+.current-route-stop{font-weight:500}
+.pin-inner.train .pin-icon{background:#84878a;border-radius:12px}
+.pin-inner.train .pin-icon img{filter:brightness(0) invert(1);width:16px;height:16px;object-fit:contain}
+.pin-inner.train.selected .pin-icon>img{width:24px;height:24px}
+
+#app[data-layer=metro] #map{background:#fff}

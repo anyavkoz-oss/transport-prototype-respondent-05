@@ -1,0 +1,19 @@
+/* Ground transport shares one layer, with a distinct tram identity in every view. */
+.mode-icon.tram,.checkout-bus-icon.tram,.route-chip-tram .chip-icon{background:#ff3e2c}
+.route-chip-tram .chip-number,.vehicle-tram .vehicle-label,.search-arrivals .tram-arrival{color:#ff3e2c}
+.chip-icon>.tram-glyph{width:16px;height:16px;object-fit:contain}
+.mixed-stop-icon{display:grid;place-items:center;width:22px;height:22px;background:#009ff5;border-radius:inherit}
+.mixed-stop-icon img{width:17px;height:17px;object-fit:contain}
+.selected .mixed-stop-icon{width:40px;height:40px}
+.selected .mixed-stop-icon img{width:30px;height:30px}
+.route-search-tram:after{mask-image:url('assets/tram-icon.png');-webkit-mask-image:url('assets/tram-icon.png')}
+.order-tram{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:#ff3e2c;flex-shrink:0}
+.order-tram img{width:25px;height:25px;object-fit:contain}
+
+.route-view-tram .route-stop:before,.route-view-tram .route-stop:after,.route-view-tram .route-end:before{background:#ff3e2c}
+
+/* Figma 286:21478 (schedule) and 286:21407 (map), respondent 5 shuttle. */
+.mode-icon.minibus{background:#dc9212}
+.vehicle-minibus .vehicle-label{color:#dc9212}
+
+.mode-icon.minibus .asset-icon{filter:none}

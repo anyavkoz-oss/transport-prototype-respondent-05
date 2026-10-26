@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / 24&#195;&#151;24 / YandexPlusLFill">
+<circle id=" " cx="8" cy="8" r="6.66667" fill="white"/>
+<path id=" _2" d="M8.00033 1.33317C8.69962 1.3332 9.39467 1.44274 10.0599 1.65837L8.54134 6.33317H4.10482L3.56185 8.00016H8.00033L6.69954 12.0002H8.53353L9.83333 8.00016H14.6663C14.6663 9.76816 13.9644 11.4639 12.7142 12.714C11.464 13.9642 9.76832 14.6661 8.00033 14.6662C6.23222 14.6662 4.53572 13.9643 3.28548 12.714C2.03541 11.4639 1.33342 9.76808 1.33333 8.00016C1.33333 6.23205 2.03524 4.53556 3.28548 3.28532C4.53572 2.03508 6.23222 1.33317 8.00033 1.33317ZM11.6468 2.42008C13.038 3.32911 14.0397 4.72444 14.4564 6.33317H10.3743L11.6468 2.42008Z" fill="url(#paint0_linear_0_1123)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_1123" x1="1.33333" y1="7.99967" x2="14.6663" y2="7.99967" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF5C4D"/>
+<stop offset="0.4" stop-color="#EB469F"/>
+<stop offset="1" stop-color="#8341EF"/>
+</linearGradient>
+</defs>
+</svg>

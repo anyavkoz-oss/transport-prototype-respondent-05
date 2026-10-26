@@ -1,0 +1,60 @@
+/* Figma 108:21398: responsive, live entry into the transport prototype. */
+#go-home{position:absolute;inset:0;z-index:1600;background:#fff;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;font-family:YSText,Arial,sans-serif;color:#21201f}
+.go-toolbar{height:87px;padding:0 16px;display:flex;justify-content:space-between;align-items:center}
+.go-toolbar-right{display:flex;align-items:center;gap:16px}
+.go-widgets{display:flex;align-items:center}
+.go-widgets>span{width:36px;height:36px;border:2px solid white;border-radius:50%;display:grid;place-items:center;margin-right:-8px;background:linear-gradient(135deg,#f5f1fa 50%,#ded7fa);z-index:3}
+.go-widgets>span:nth-child(2){background:#dcf7e8;z-index:2}.go-widgets>span:last-child{margin-right:0;background:linear-gradient(135deg,#fff6fb 50%,#e7d4f9);z-index:1}
+.go-menu{width:40px;height:40px;display:grid;place-items:center}
+.go-nav{width:375px;max-width:100%;margin-inline:auto;padding:12px 0}
+.go-main-services{display:grid;grid-template-columns:1fr 1fr;margin:0 19.5px}
+.go-service{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;height:84px;padding:4px 0 0;font:500 11px/12px YSText;letter-spacing:.11px;flex-shrink:0;text-align:center}
+.go-service-art{height:48px;width:132px;position:relative;display:block}
+.go-service-art img{display:block;width:132px;height:48px;position:absolute;bottom:0;left:0}
+.go-service-art.scooter img{height:55px}
+.go-service small{font:inherit;color:#9e9b98}
+.go-small-services{display:flex;overflow-x:auto;scrollbar-width:none;padding-left:19.5px;padding-right:12px}
+.go-small-services .go-service{width:76px}.go-small-services .go-service:nth-child(2){width:84px}
+.go-small-services .go-service-art{width:48px}.go-small-services img{width:48px;height:48px;object-fit:contain}
+.go-small-services .drive img{width:48px}
+.go-pagination{height:24px;display:flex;align-items:center;justify-content:center;gap:6px}.go-pagination i{width:6px;height:6px;border-radius:50%;background:#bbb}.go-pagination i:first-child{width:8px;height:8px;background:#21201f}
+.go-shortcuts{margin:0 auto;width:80%;max-width:380px}
+.go-find{height:48px;border-radius:16px;background:#5c5a571a;width:100%;font-size:16px;font-weight:500;margin-bottom:8px}
+.go-shortcut{padding:0 4px 0 0;width:100%;height:56px;display:flex;align-items:center;gap:8px;text-align:left}
+.go-shortcut>span:first-child{width:40px;height:40px;display:grid;place-items:center;flex-shrink:0;border-radius:12px;background:#f5f4f2}
+.go-shortcut>span:last-child{min-width:0;flex:1;font-size:16px;line-height:17px}
+.go-shortcut small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#9e9b98;font-size:13px;line-height:14px;margin-top:1px}
+.go-shortcut+ .go-shortcut{position:relative}.go-shortcut+ .go-shortcut:before{content:'';position:absolute;left:48px;right:4px;top:0;height:.5px;background:#8a878466}
+.go-feed{padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.go-feed article{padding:6px;border-radius:20px;min-width:0;min-height:255px}
+.go-product-photo{border-radius:16px;background:#f8f7f5;aspect-ratio:1;overflow:hidden;padding:2px}
+.go-product-photo img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;border-radius:16px;display:block}
+.go-product-copy{padding:8px 6px;font-size:13px;line-height:15px;font-weight:500}.go-product-copy small{display:block;font-size:11px;line-height:13px;letter-spacing:.11px;margin-top:2px}
+#transport-home-back{position:absolute;left:8px;bottom:calc(51% + 10px);z-index:410;width:48px;height:48px;transition:bottom .34s}
+#app:has(.sheet.collapsed) #transport-home-back{bottom:calc(25% + 10px)}
+#app:has(.sheet.expanded) #transport-home-back,#app.stop-view #transport-home-back,#app.far-journey #transport-home-back{display:none}
+@media(max-height:700px){#transport-home-back{bottom:calc(55% + 10px)}}
+/* Correct local layout anchors without changing the shared icon geometry. */
+.troika-card-art{display:block}.troika-card-art>small{left:0;right:0;bottom:2px;white-space:nowrap;pointer-events:none}
+#favorites-open{width:44px;flex:0 0 44px;padding:0;line-height:0;display:flex;align-items:center;justify-content:center}
+#favorites-open .asset-icon{display:block;flex:none}
+.search-main{min-width:0}.search-main>span:last-child{overflow:hidden;text-overflow:ellipsis}
+.has-active #my-tickets-open{position:absolute;inset:0 0 54px;margin:0!important;width:100%;height:auto;display:flex;align-items:flex-start;padding:48px 14px 0;border-radius:24px;z-index:0}
+.has-active .buy{position:relative}
+.rail-track{display:flex;gap:4px;align-items:center;height:32px;width:100%;padding:0 16px}
+.rail-track:before,.rail-track:after{content:'';box-sizing:border-box;width:16px;height:16px;flex:0 0 16px;border:3px solid #cccac7;border-radius:50%}
+.rail-track>span{height:4px;flex:1;background:#cccac7;border-radius:100px}
+#far-points{font-family:YSText,Arial,sans-serif;letter-spacing:.16px;gap:2px;min-width:59px;line-height:19px}
+#far-points img{flex:none}
+.journey-pickup-tail{transform:scaleY(-1)}
+.journey-pickup small{letter-spacing:.11px}
+.journey-finish{padding:1.5px}
+.journey-finish>span{display:grid;place-items:center;width:21px;height:21px;border-radius:8px;background:#5c5a571a}
+.journey-finish img{width:auto;height:auto;transform:none}
+
+.go-widgets img{width:16px;height:16px}.go-shortcut>span:first-child img{width:24px;height:24px}
+
+/* Match the 19px + 64px map toolbar while keeping a 44px tap target. */
+#app>header{top:calc(29px + env(safe-area-inset-top,0px))}
+#app>header .origin{min-height:44px;padding:6px 0}
+#go-home{padding-top:env(safe-area-inset-top,0px)}

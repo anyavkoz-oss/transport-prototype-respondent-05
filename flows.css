@@ -1,0 +1,64 @@
+#topup:disabled{opacity:1;color:#222;cursor:default;transform:none}
+/* Route details keep the map and use the design's compact timeline sheet. */
+.route-view .sheet{height:38%;border-radius:24px 24px 0 0}.route-view #map{bottom:calc(38% - 24px)}
+.route-view #stop-back{bottom:calc(38% + 10px)}.route-view .map-tools{display:none}
+.route-view .sheet.expanded{height:84%}.route-view:has(.sheet.expanded) #map{bottom:calc(84% - 24px)}.route-view:has(.sheet.expanded) #stop-back{bottom:calc(84% + 10px)}
+.bus-route-heading{padding:0 16px 12px;display:flex;justify-content:space-between;gap:8px;flex-shrink:0;border-bottom:.5px solid #deddda;margin:0 16px;padding-left:0;padding-right:0}
+.bus-route-heading h1{font:800 24px/28px YSDisplay;margin:0 0 2px}.bus-route-heading p{font-size:13px;margin:0;line-height:17px}.bus-route-heading p span{color:#ccc}.bus-route-heading .heart{padding:0;flex-shrink:0}
+.route-stops-list{padding:0 16px 0 56px;overflow:auto;flex:1;min-height:70px}.route-stop{position:relative;display:flex;align-items:center;gap:12px;justify-content:space-between;width:100%;text-align:left;min-height:64px;padding:0;font-size:16px}.route-stop:before,.route-end:before{content:'';position:absolute;left:-30px;top:0;bottom:0;width:4px;background:#009ff5}.route-stop:after{content:'';position:absolute;left:-32px;top:29px;width:8px;height:8px;background:#009ff5;border-radius:50%}.route-stop.passed{color:#999}.route-stop.passed:before,.route-stop.passed:after{background:#ccc}.route-stop time{white-space:nowrap}.route-end{position:relative;font-size:16px;min-height:56px;display:flex;align-items:center}
+.vehicle-marker{cursor:pointer}
+/* Native text and controls replace the enlarged modal screenshot. */
+.troika-live{display:flex;align-items:flex-end;background:#0008}
+.cards-backdrop{position:absolute;inset:0;width:100%;height:100%;border-radius:0;background:transparent}
+.transport-cards-sheet{z-index:1;position:relative;background:#fff;border-radius:24px 24px 0 0;width:100%;max-height:100%;overflow:auto;box-shadow:0 -8px 24px #0001}
+.transport-cards-sheet h2{height:56px;background:#f5f4f2;margin:0;display:grid;place-items:center;font:600 16px/20px YSText}
+.transport-card-row{margin:0 8px;border-bottom:.5px solid #d4d3d2;padding-bottom:8px}
+.transport-card-info{height:56px;display:flex;align-items:center;gap:10px;padding:0 2px}
+.troika-card-art{width:36px;height:24px;position:relative;flex-shrink:0}.troika-card-art img{width:36px;height:24px;object-fit:contain}.troika-card-art>small{position:absolute;bottom:2px;width:100%;text-align:center;color:white;font-size:4px;line-height:5px;font-weight:600;letter-spacing:.2px}
+.transport-card-info>div{flex:1;min-width:0;font-size:16px;line-height:18px}.transport-card-info>div small{display:block;font-size:14px;color:#999;line-height:17px}
+.card-check{width:32px;height:32px;border-radius:50%;background:#efeeee;box-shadow:inset 0 2px 3px #0001;margin-right:6px;display:grid;place-items:center}.card-check.checked{background:#fce000;box-shadow:none}
+.card-static-actions{display:flex;gap:4px}.card-static-actions span{height:48px;border-radius:16px;background:#efeeee;display:grid;place-items:center;flex:1;font-size:14px}
+.card-add{height:64px;display:flex;gap:10px;align-items:center;padding:0 16px 0 10px;font-size:16px}.card-add>span{width:36px;height:24px;border:1px solid #333;border-radius:4px;display:grid;place-items:center;font-size:24px;line-height:20px}.card-add b{margin-left:auto;font-size:26px;font-weight:400}
+.cards-footer{margin-top:16px;padding:8px 8px max(8px,env(safe-area-inset-bottom));box-shadow:0 -8px 25px #0001;border-radius:24px 24px 0 0}.cards-footer button{width:100%;height:56px;background:#fce000;border-radius:16px;font-size:16px;font-weight:600}.home-indicator{width:134px;height:5px;background:#222;border-radius:5px;margin:29px auto 0}
+/* Active ticket is a real session state. */
+.wallet-card.has-active{overflow:visible;background:transparent;padding-top:36px;isolation:isolate}.has-active:before{content:'';position:absolute;inset:24px 0 0;border-radius:24px;background:#f5f4f2;z-index:-1}.ticket-card.has-active:after{display:none}.active-ticket-art{position:absolute;width:134px;height:92px;object-fit:contain;top:22px;left:calc(50% - 67px);transform:rotate(-90deg);z-index:-2}.has-active .wallet-title{margin:12px 6px 0!important;font-size:22px}.has-active .buy{z-index:1}
+/* Orders use the transport order cards from the supplied layout. */
+#overlay.orders-screen{padding:0 8px 24px}.orders-screen .page-top{height:56px;min-height:56px;margin:0;padding:0 8px;position:relative}.orders-screen .page-top h1{position:absolute;left:48px;right:48px;text-align:center;font:600 16px/20px YSText;pointer-events:none}.orders-screen #page-close{display:none}
+.order-filters{display:flex;gap:4px;overflow:auto;padding:8px 4px 12px;scrollbar-width:none}.order-filters button{display:flex;gap:6px;align-items:center;white-space:nowrap;background:#efeeee;border-radius:24px;padding:10px;font-size:13px;height:40px}.order-filters img{width:20px;height:20px}.order-filters .active{background:#30302e;color:#fff}
+.orders-label{font-size:13px;color:#92928e;margin:8px 8px 12px}.order-card{background:#f5f4f2;border-radius:24px;margin-bottom:8px;padding:12px}.order-info{display:flex;gap:12px;align-items:center;min-height:40px}.order-info>img,.order-train{width:40px;height:40px;object-fit:contain;border-radius:12px;flex-shrink:0}.order-train{display:grid;place-items:center;background:#8b8e90}.order-train img{width:24px;height:24px;filter:brightness(0) invert(1)}.order-info>div{min-width:0;flex:1}.order-info strong{display:block;font-size:16px;font-weight:600;line-height:18px}.order-info small{display:block;font-size:13px;line-height:17px;color:#92928e;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.order-info>span:last-child{white-space:nowrap;font-size:16px}.order-actions{display:flex;gap:4px;margin-top:16px}.order-actions button{flex:1;background:#fff;border-radius:16px;height:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:12px;font-weight:600}.order-actions img{width:24px;height:24px}
+/* Search uses the device keyboard, keeping the input above its visible viewport. */
+#overlay.search-screen{padding:0;background:#f5f4f2;display:flex;flex-direction:column;padding-bottom:var(--keyboard-inset,0);overflow:hidden}
+.search-screen .page-top{height:56px;min-height:56px;margin:0;padding:0 12px;background:#fff}.search-screen .page-top h1,.search-screen #page-close{display:none}
+.search-location{position:absolute;top:8px;left:64px;right:64px;text-align:center}.search-location small{display:block;font-size:12px}.search-location button{font-size:16px;font-weight:600;padding:0;white-space:nowrap;max-width:100%;text-overflow:ellipsis;overflow:hidden}
+.search-tabs{display:flex;justify-content:center;gap:12px;background:#fff;border-radius:0 0 24px 24px;flex-shrink:0;padding:0 0 8px}.search-tabs button{width:80px;height:90px;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:13px;position:relative;color:#999}.search-tabs button>span{position:relative;width:52px;height:52px;display:grid;place-items:center;background:#f5f4f2;border-radius:50%}.search-tabs img{width:24px;height:24px}.search-tabs b{position:absolute;top:-3px;right:-2px;border-radius:10px;background:#ff543c;color:white;padding:1px 4px;font-size:11px}.search-tabs .selected{color:#222}.search-tabs .selected:after{content:'';position:absolute;bottom:-8px;width:52px;height:3px;border-radius:3px;background:#222}
+.search-suggestions{flex:1;min-height:0;overflow:auto;background:#fff;border-radius:24px 24px 0 0;margin-top:6px;padding:0 8px 12px}.suggestion-row{display:flex;width:100%;text-align:left;align-items:center;gap:8px;padding:8px 0;min-height:56px}.suggestion-icon{height:40px;width:40px;display:grid;place-items:center;background:#f1f0ee;border-radius:12px;flex-shrink:0}.suggestion-icon img{width:24px;height:24px;object-fit:contain;filter:grayscale(1);opacity:.45}.suggestion-content{flex:1;min-width:0;font-size:16px;line-height:20px}.suggestion-content>small{display:block;font-size:13px;color:#999;line-height:17px}.suggestion-trail{width:20px;height:20px;opacity:.4}.search-arrivals{display:flex;gap:4px;margin-top:4px}.search-arrivals b{background:#009ff5;color:white;border-radius:9px;font-size:12px;line-height:18px;padding:0 6px;font-weight:600}
+.search-input-dock{height:56px;min-height:56px;background:#fff;border-radius:30px;box-shadow:0 3px 22px #0002;display:flex;align-items:center;margin:0 8px max(10px,env(safe-area-inset-bottom));position:relative;z-index:1}.search-input-dock>img{width:40px;height:40px;margin:0 8px}.search-input-dock input{min-width:0;flex:1;border:0;outline:0;font:16px YSText;background:none}.search-input-dock>button{padding:12px;opacity:.5}
+/* Address selection is a sheet over the current map. */
+#overlay.origin-screen{padding:0;background:#0006;display:flex;flex-direction:column;padding-top:max(48px,env(safe-area-inset-top));padding-bottom:var(--keyboard-inset,0);overflow:hidden}
+.origin-screen>.page-top{display:none}.origin-picker{background:#fff;flex:1;min-height:0;display:flex;flex-direction:column;border-radius:24px 24px 0 0}.picker-handle{height:4px;width:34px;background:#ccc;border-radius:4px;margin:5px auto 8px;flex-shrink:0}.origin-input-row{display:flex;align-items:center;gap:8px;margin:0 8px 0;padding:8px;background:#fff;border-radius:20px;box-shadow:0 5px 20px #0002;flex-shrink:0;z-index:1}.origin-input-icon{width:40px;height:40px;border-radius:12px;background:#fce000;display:grid;place-items:center}.origin-input-row label{flex:1;min-width:0}.origin-input-row label>span{font-size:13px;color:#999;display:block}.origin-input-row input{font:16px YSText;border:0;outline:0;width:100%;background:none}.origin-input-row>button{font-size:13px;padding:6px}#origin-map{background:#efeeee;border-radius:20px;padding:8px 16px}
+#origin-results{overflow:auto;padding:0 16px;flex:1}.origin-result{display:flex;gap:16px;align-items:center;width:100%;padding:12px 0;text-align:left;min-height:56px}.origin-result>img{width:24px;height:24px;opacity:.45}.origin-result>span{flex:1;font-size:16px;border-bottom:.5px solid #deddda;padding-bottom:12px;line-height:20px}.origin-result small{display:block;font-size:13px;color:#999;line-height:17px}
+.search-location{z-index:3}
+
+/* User-supplied gray glyphs already carry their intended color and opacity. */
+.suggestion-icon img.supplied-search-icon{display:block;width:24px;height:24px;filter:none;opacity:1}
+
+/* Match the supplied search glyphs: RGBA(137, 135, 132, 102/255). */
+.route-search-icon{position:relative}
+.route-search-icon img{visibility:hidden}
+.route-search-icon:after{content:'';position:absolute;inset:8px;background:rgba(137,135,132,.4);mask:url('assets/bus-icon.svg') center/24px 24px no-repeat;-webkit-mask:url('assets/bus-icon.svg') center/24px 24px no-repeat}
+
+/* The address picker can be dismissed by its handle without choosing a location. */
+.origin-picker{transition:transform .22s ease}
+.origin-picker.dragging{transition:none}
+button.picker-handle{display:flex;align-items:center;justify-content:center;width:100%;height:32px;min-height:32px;margin:0;background:transparent;border:0;border-radius:24px 24px 0 0;padding:0;touch-action:none;cursor:grab}
+button.picker-handle:active{cursor:grabbing}
+.picker-handle>span{width:34px;height:4px;border-radius:4px;background:#ccc;pointer-events:none}
+.picker-handle:focus-visible{outline:2px solid #009ff5;outline-offset:-4px}
+@media(prefers-reduced-motion:reduce){.origin-picker{transition:none}}
+
+.bus-route-heading h1 .route-qualifier{color:#888;font-weight:500}
+
+/* Station and departure glyphs share the muted gray of other search icons. */
+.suggestion-icon:has(img[src*="train-active.svg"]){position:relative}
+.suggestion-icon img[src*="train-active.svg"]{visibility:hidden}
+.suggestion-icon:has(img[src*="train-active.svg"]):after{content:'';position:absolute;inset:8px;background:rgba(137,135,132,.4);mask:url('assets/train-active.svg') center/24px 24px no-repeat;-webkit-mask:url('assets/train-active.svg') center/24px 24px no-repeat}
